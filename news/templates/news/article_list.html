@@ -1,0 +1,5 @@
+{% for object in object_list %}
+<p>{{ object.title }}</p>
+{% empty %}
+<p>There are no articles saved</p>
+{% endfor %}
