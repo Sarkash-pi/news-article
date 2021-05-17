@@ -1,5 +1,10 @@
 {% for object in object_list %}
-<p>{{ object.title }}</p>
+<p>
+  {{ object.title }}
+  <a href="{% url 'article-update' object.id %}">Update</a>
+  <a href="{% url 'article-delete' object.id %}">Delete</a>
+  <a href="{% url 'article-detail' object.id %}">Details</a>
+</p>
 {% empty %}
 <p>There are no articles saved</p>
 {% endfor %}

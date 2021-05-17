@@ -10,16 +10,21 @@ class ArticleListView(generic.ListView):
 
 
 class ArticleDetailView(generic.DetailView):
-    pass
+    model = Article
 
 
 class ArticleCreateView(generic.CreateView):
-    pass
+    model = Article
+    fields = ["pub_date", "title", "content"]
+    success_url = "/"
 
 
 class ArticleUpdateView(generic.UpdateView):
-    pass
+    model = Article
+    fields = ["pub_date", "title", "content"]
+    success_url = "/"
 
 
 class ArticleDeleteView(generic.DeleteView):
-    pass
+    model = Article
+    success_url = "/"
